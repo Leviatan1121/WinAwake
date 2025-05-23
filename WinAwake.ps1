@@ -2,13 +2,13 @@ using namespace System.Windows.Forms
 using namespace System.Drawing
 
 # Verify if runs in hidden mode
-param([switch]$Hidden)
+#param([switch]$Hidden)
 
-if (-not $Hidden) {
+#if (-not $Hidden) {
     # Restart in hidden mode
-    Start-Process powershell.exe -ArgumentList "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$PSCommandPath`" -Hidden" -WindowStyle Hidden
-    exit
-}
+ #   Start-Process powershell.exe -ArgumentList "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$PSCommandPath`" -Hidden" -WindowStyle Hidden
+  #  exit
+#}
 
 Add-Type -AssemblyName System.Windows.Forms
 
