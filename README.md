@@ -1,7 +1,11 @@
 # WinAwake
 
-| WinAwake is a simple Windows utility to keep the system awake.<br>You can run it directly from the command line or download and run the executable file. | ![screenshot.png](screenshot.png) |
-|-|-|
+<div align="center">
+
+| <br><p align="center">**WinAwake** is a simple Windows utility to<br>keep the system awake.<br><br>Run it directly from the command line or<br>download the executable file!</p> | ![screenshot.png](screenshot.png) |
+| :--- | :---: |
+
+</div>
 
 
 ## Usage
