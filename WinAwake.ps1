@@ -81,7 +81,7 @@ function Start-WinAwake {
     $timer.Dispose()
 }
 
-# Si estamos ejecutando desde irm | iex
+# Running from irm | iex
 if (-not $PSCommandPath) {
     $tempScript = [System.IO.Path]::GetTempFileName() + ".ps1"
     @"
@@ -97,17 +97,17 @@ Start-WinAwake
     return
 }
 
-# Para ejecución local normal
+# For local execution
 if (-not $Hidden) {
     Start-Process powershell.exe -ArgumentList "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$PSCommandPath`" -Hidden" -WindowStyle Hidden
     return
 }
 
-# Asegurarse de que estamos en STA para la interfaz gráfica
+# Verify that we are in STA for the GUI
 if ([Threading.Thread]::CurrentThread.GetApartmentState() -ne 'STA') {
     PowerShell -STA -File $PSCommandPath -Hidden
     return
 }
 
-# Iniciar la aplicación
+# Start the application
 Start-WinAwake
